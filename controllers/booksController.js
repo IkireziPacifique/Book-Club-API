@@ -52,7 +52,7 @@ export async function viewBook(req, res) {
 }
 
 //View all books
-export async function viewAllMembers(req, res) {
+export async function viewAllBooks(req, res) {
     try {
         let allbooks = await Book.findAll();
         if (allbooks) {
@@ -77,7 +77,7 @@ export async function viewAllMembers(req, res) {
 }
 
 //Update book record
-export async function updateMembers(req, res) {
+export async function updateBook(req, res) {
     try {
         let book = await Book.update(req.body);
         if (book) {

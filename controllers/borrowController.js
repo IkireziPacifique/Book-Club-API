@@ -27,7 +27,7 @@ export async function addRecord(req, res) {
 }
 
 // View Record borrow
-export async function viewMember(req, res) {
+export async function viewRecord(req, res) {
     try {
         let allrecords = await Borrow.findAll({where: {record_id: req.params.id}});
         if (allrecords) {
@@ -102,7 +102,7 @@ export async function updateRecord(req, res) {
 }
 
 // View Member Borrowings borrow
-export async function viewMember(req, res) {
+export async function viewMemberRecord(req, res) {
     try {
         let member = await Borrow.findAll({where: {member_id: req.params.id}});
         if (member) {

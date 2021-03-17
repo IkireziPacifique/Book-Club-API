@@ -2,7 +2,7 @@ import express from "express";
 import { addRecord, viewRecord, viewAllRecord, updateRecord, viewMemberRecord } from '../controllers/borrowController.js'
 import { authenticate } from '../middlewares/auth.js';
 
-const membersRouter = express.Router();
+const borrowRouter = express.Router();
 
 // Create Record borrow/
 borrowRouter.post("/", authenticate, addRecord);
@@ -20,7 +20,7 @@ borrowRouter.post("/", authenticate, updateRecord);
 borrowRouter.post("/", authenticate, viewMemberRecord);
 
 
-export default booksRouter;
+export default borrowRouter;
 
 
 

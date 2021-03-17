@@ -2,7 +2,7 @@ import express from "express";
 import { addBook, viewBook, viewAllBooks, updateBook, deleteBook } from '../controllers/booksController.js'
 import { authenticate } from '../middlewares/auth.js';
 
-const membersRouter = express.Router();
+const booksRouter = express.Router();
 
 // Add a book books/
 booksRouter.post("/", authenticate, addBook);
